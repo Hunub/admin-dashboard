@@ -147,8 +147,6 @@ h6 {
 
 .topbar .material-symbols-outlined {
     display: inline-block;
-
-
     font-variation-settings:
     'FILL' 0,
     'wght' 600,
@@ -156,8 +154,17 @@ h6 {
     'opsz' 36;
 }
 
+.topbar .material-symbols-outlined:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
 .mini {
     height: 48px;
+}
+
+.mini:hover {
+    cursor: pointer;
 }
 
 /* profile */
