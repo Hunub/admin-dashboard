@@ -4,241 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            display: grid;
-            grid-template: 100px 100px 10fr / 1fr 4fr;
-        }
-
-        .sidebar {
-            grid-area: 1/1/-1/2;
-            background-color: aqua;
-            padding: 18px;
-            display: grid;
-            gap: 36px;
-            grid-template-rows: 80px 300px 150px;
-            align-content: start;
-            align-items: center;
-        }
-
-        .topbar {
-            grid-area: 1/2/2/-1;
-            background-color: blue;
-            display: grid;
-            gap: 12px;
-            grid-template-columns: 32px 10fr 32px 50px 1fr;
-            align-items: center;
-            padding: 12px 24px;
-        }
-        .profile {
-            grid-area: 2/2/3/-1;
-            background-color: burlywood;
-            display: grid;
-            gap: 24px;
-            grid-template-columns: 48px 1fr repeat(3, 48px);
-            align-items: center;
-            padding: 12px 24px;
-        }
-        .board {
-            grid-area: 3/2/-1/-1;
-            background-color: bisque;
-            display: grid;
-            gap: 18px;
-            grid-template: 36px 1fr 36px 1fr / 3fr 1fr; 
-            padding: 12px 24px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .nav_item,
-        .menu_item {
-            display: grid;
-            grid-template-columns: 32px 1fr;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .board>t2{
-            align-self: self-end;
-        } 
-        #board_title_1 {
-            grid-area: 1/1/2/2;
-        }
-
-        #board_title_2 {
-            grid-area: 1/2/2/3;
-        }
-
-        #board_title_3 {
-            grid-area: 3/2/4/3;
-        }
-
-        .board_proj {
-            grid-area: 2/1/5/2;
-            display: grid;
-            grid-template: repeat(3, 1fr)/repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .proj_card,
-        .board_anno,
-        .board_tren  {
-            background-color: white;
-            padding: 12px;
-        }
-
-        .tren_users {
-            display: grid;
-            grid-template-columns: 32px 1fr;
-            gap: 12px;
-            align-items: center;
-        }
-
+       
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="logo">Dashboard</div>
+        <div class="logo"><img src="img/logo.png" alt="logo"><span>Dashboard</span></div>
         <ul class="nav">
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>Home</p>
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                <p><a href="#">Home</a></p>
             </li>
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>Profile</p>
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <p><a href="#">Profile</a></p>
             </li>
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>Message</p>
+                <span class="material-symbols-outlined">
+                    mode_comment
+                </span>
+                <p><a href="#">Message</a></p>
             </li>
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>History</p>
+                <span class="material-symbols-outlined">
+                    schedule
+                </span>
+                <p><a href="#">History</a></p>
             </li>
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>Tasks</p>
+                <span class="material-symbols-outlined">
+                    task
+                </span>
+                <p><a href="#">Tasks</a></p>
             </li>
             <li class="nav_item">
-                <img src="" alt="#">
-                <p>Communities</p>
+                <span class="material-symbols-outlined">
+                    group
+                </span>
+                <p><a href="#">Communities</a></p>
             </li>
         </ul>
         <ul class="menu">
             <li class="menu_item">
-                <img src="" alt="#">
-                <p>Settings</p>
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <p><a href="#">Settings</a></p>
             </li>
             <li class="menu_item">
-                <img src="" alt="#">
-                <p>Support</p>
+                <span class="material-symbols-outlined">
+                    help
+                </span>
+                <p><a href="#">Support</a></p>
             </li>
             <li class="menu_item">
-                <img src="" alt="#">
-                <p>Privacy</p>
+                <span class="material-symbols-outlined">
+                    verified_user
+                </span>
+                <p><a href="#">Privacy</a></p>
             </li>
         </ul>
     </div>
     <div class="topbar">
-        <img src="" alt="#" class="seh_btn">
-        <input type="search" name="" id="">
-        <img src="" alt="#" class="icon_not">
-        <img src="" alt="#" class="avatar mini">
-        <t3 class="username">Morgan Oakley</t3>
+        <span class="material-symbols-outlined">
+            search
+        </span>
+        <input type="search" name="" id="search">
+        <span class="material-symbols-outlined">
+            notifications
+        </span>
+        <img src="img/avatar_img.png" alt="#" class="avatar mini">
+        <h3 class="username">Morgan Oakley</h3>
     </div>
     <div class="profile">
-        <img src="" alt="placeholder" class="username big">
+        <img src="img/avatar_img.png" alt="placeholder" class="avatar big">
         <div class="profname">
             <p>Hi there,</p>
-            <t1>Morgan Oakley</t1>
+            <h1>Morgan Oakley</h1>
         </div>
         <button class="action">New</button>
         <button class="action">Upload</button>
-        <button class="action">Share</button>  
+        <button class="action">Share</button>
     </div>
     <div class="board">
-        <t2 id="board_title_1">Your Projects</t2>
+        <h2 id="board_title_1">Your Projects</h2>
         <div class="board_proj">
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="#" class=""><img src="" alt="#" class=""><img src="" alt="#" class=""></div>
+
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation, documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="" class=""><img src="" alt="" class=""><img src="" alt="" class=""></div>
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation, you will see the abbrdocumentation fly-out open, you will see a preview of the expeviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
+
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="" class=""><img src="" alt="" class=""><img src="" alt="" class=""></div>
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation, you willdocumentation fly-out open, you will see a preview of the expin the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
+
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="" class=""><img src="" alt="" class=""><img src="" alt="" class=""></div>
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation,documentation fly-out open, you will see a preview of the expdocumentation fly-out open, you will see a preview of the exp displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
+
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="" class=""><img src="" alt="" class=""><img src="" alt="" class=""></div>
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
+
             <div class="proj_card">
+                <div class="card_edge"></div>
                 <div class="card_text">
-                    <t4 class="card_title">Project Name</t4>
-                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p></div>
-                <img src="" alt="" class=""><img src="" alt="" class=""><img src="" alt="" class=""></div>
+                    <h4 class="card_title">Project Name</h4>
+                    <p>When you start typing an Emmet abbreviation, you will see the abbreviation displayed in the suggestion list. If you have the suggestion documentation fly-out open, you will see a preview of the expansion as you type. </p>
+                </div>
+                <div class="card_icon">
+                    <span class="material-symbols-outlined">
+                        bookmarks
+                    </span>
+                    <span class="material-symbols-outlined">
+                        update
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                    </span>
+                </div>
+            </div>
+
+
         </div>
-        <t2 id="board_title_2">Announcements</t2>
+        <h2 id="board_title_2">Announcements</h2>
         <div class="board_anno">
             <div class="anno_item">
-                <t5>Announcements</t5>
+                <h5>Site Maintenance</h5>
                 <p>This is exciting news: blahblahblah</p>
             </div>
+            <div class="anno_sep"></div>
             <div class="anno_item">
-                <t5>Announcements</t5>
-                <p>This is exciting news: blahblahblah</p>
+                <h5>Community Share Day</h5>
+                <p>TA non-negative percentage relative to the inline size of the grid container in column grid tracks</p>
             </div>
+            <div class="anno_sep"></div>
             <div class="anno_item">
-                <t5>Announcements</t5>
-                <p>This is exciting news: blahblahblah</p>
+                <h5>Updated Pprivacy Policy</h5>
+                <p>A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks.</p>
             </div>
         </div>
-        <t2 id="board_title_3">Trending</t2>
+        <h2 id="board_title_3">Trending</h2>
         <div class="board_tren">
             <div class="tren_users">
-                <img src="" alt="avatar" class="tren_user_ava">
+                <img src="img/avatar_img.png" alt="avatar" class="tren_user_ava">
                 <div class="usernames">
-                    <t6>User Name</t6>
+                    <h6>User Name</h6>
                     <p>Bio placeholder</p>
                 </div>
             </div>
             <div class="tren_users">
-                <img src="" alt="avatar" class="tren_user_ava">
+                <img src="img/avatar_img.png" alt="avatar" class="tren_user_ava">
                 <div class="usernames">
-                    <t6>User Name</t6>
+                    <h6>User Name</h6>
                     <p>Bio placeholder</p>
                 </div>
             </div>
             <div class="tren_users">
-                <img src="" alt="avatar" class="tren_user_ava">
+                <img src="img/avatar_img.png" alt="avatar" class="tren_user_ava">
                 <div class="usernames">
-                    <t6>User Name</t6>
+                    <h6>User Name</h6>
                     <p>Bio placeholder</p>
                 </div>
             </div>
             <div class="tren_users">
-                <img src="" alt="avatar" class="tren_user_ava">
+                <img src="img/avatar_img.png" alt="avatar" class="tren_user_ava">
                 <div class="usernames">
-                    <t6>User Name</t6>
+                    <h6>User Name</h6>
                     <p>Bio placeholder</p>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
